@@ -1,0 +1,4 @@
+telebot
+psycopg2
+prettytable
+python_telegram_bot

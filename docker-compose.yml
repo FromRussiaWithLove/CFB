@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  childfeedbot:
+    build: .
+    container_name: childfeedbot-pgsql
+    command: python main.py
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: C:\\Users\\A.Vakhonin\\Documents\\cuntainyrs\\ChildBot
+        target: /settings
