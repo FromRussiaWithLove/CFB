@@ -37,7 +37,7 @@ class MessageParser:
         for item in message_list:
             # Если элемент соответствует времени, то устанавливаем новое время
             if re.fullmatch(r'\d{1,2}.\d\d', item):
-                self.__timestamp = datetime_methods.timestamp_from_time(item)
+                self.__timestamp = datetime_methods.timestamp_from_time(message.date, item)
                 continue
 
             if item == 'с' and not self.__breast:

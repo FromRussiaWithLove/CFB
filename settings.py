@@ -13,7 +13,7 @@ database = {'user': '',
             'port': '',
             'dbname': '',
             'postgresdb': '',
-            'type': '',
+            'type' : '',
             }
 
 # Записей в сообщении по умолчанию

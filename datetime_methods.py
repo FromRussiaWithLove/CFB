@@ -4,9 +4,10 @@ import time
 import settings
 
 
-def timestamp_from_time(time_string):
-    today = datetime.datetime.today()
-    time_string = f'{today.year}-{today.month}-{today.day} {time_string[:-3]}:{time_string[-2:]}'
+def timestamp_from_time(message_timestamp, time_string):
+    message_date = date_time_from_timestamp(message_timestamp)[0]
+    message_date = message_date.split('.')
+    time_string = f'{message_date[2]}-{message_date[1]}-{message_date[0]} {time_string[:-3]}:{time_string[-2:]}'
     return time.mktime((datetime.datetime.strptime(time_string,
                                                    "%Y-%m-%d %H:%M") - settings.delta).timetuple())
 
