@@ -46,7 +46,7 @@ class MessageParser:
 
             # Если элемент это число, то это объем кормления
             if re.fullmatch(r'\d{1,3}', item):
-                self.__content += f' {item}мл '
+                self.__content += f'{item}мл '
                 continue
 
             # Если элемент соответствует псевдониму, то устанавливаем псевдоним
@@ -56,11 +56,10 @@ class MessageParser:
                 continue
 
             addition_content += f' {item}'
-
+        self.__content += addition_content
+        if self.__breast:
+            self.__content = 'C ' + self.__content
         if self.content != '' and not self.__child_id is None:
-            self.__content += addition_content
-            if self.__breast:
-                self.__content = 'C ' + self.__content
             self.__message_type = 'feed_insertion'
             return
 

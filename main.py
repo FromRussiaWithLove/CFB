@@ -1,6 +1,6 @@
 import shutil
 
-shutil.copyfile('./settings/settings.py', './settings.py')
+shutil.copyfile('/settings/settings.py', './settings.py')
 
 import telebot
 from telegram.constants import ParseMode

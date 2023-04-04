@@ -175,6 +175,7 @@ class PostgreHandler(DbBaseModel):
 
     @classmethod
     def get_feedings(cls, child_id: int, n: int) -> str:
+        response = 'Нет данных'
         try:
             connection = cls.connect_db()
             cursor = connection.cursor()

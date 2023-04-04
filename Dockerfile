@@ -1,6 +1,6 @@
 FROM python:3
 
-WORKDIR /ChildFeedBot
+WORKDIR /CFB
 
 COPY requirements.txt ./
 

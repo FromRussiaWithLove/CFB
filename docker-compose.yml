@@ -3,7 +3,7 @@ version: '3'
 services:
   childfeedbot:
     build: .
-    container_name: childfeedbot-pgsql
+    container_name: CFB
     command: python main.py
     restart: unless-stopped
     volumes:
